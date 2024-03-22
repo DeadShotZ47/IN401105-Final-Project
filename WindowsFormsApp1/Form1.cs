@@ -16,12 +16,12 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 
-        int currentCount1 = 0;   //ข้าวหมูย่าง
-        int currentCount2 = 0;   //ข้าวไก่ย่าง
-        int currentCount3 = 0;   //ข้าวกะเพราทะเล
-        int currentCount4 = 0;   //ข้าวพริกเผาทะเล
-        int currentCount5 = 0;   //ข้าวหมูทอดกระเทียม
-        int currentCount6 = 0;   //ข้าวไก่ทอดกระเทียม
+        private int currentCount1 = 0;   //ข้าวหมูย่าง
+        private int currentCount2 = 0;   //ข้าวไก่ย่าง
+        private int currentCount3 = 0;   //ข้าวกะเพราทะเล
+        private int currentCount4 = 0;   //ข้าวพริกเผาทะเล
+        private int currentCount5 = 0;   //ข้าวหมูทอดกระเทียม
+        private int currentCount6 = 0;   //ข้าวไก่ทอดกระเทียม
         
         public Form1()
         {   
@@ -237,12 +237,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void khaoKaiThodKrathiamCompleteButton_Click(object sender, EventArgs e)
-        {
-            ClearAllCurrent();
-            ClearAllMenu();
-
-        }
+        
         
         //นำเข้าข้อมูลจากไฟล์
         private void importMaterial_Click(object sender, EventArgs e)
@@ -261,6 +256,12 @@ namespace WindowsFormsApp1
         {
             CSV csv = new CSV();
             csv.SavetoFile(menu);
+        }
+
+        private void ClearOrder_Click(object sender, EventArgs e)
+        {
+            ClearAllCurrent();
+            ClearAllMenu();
         }
     }
 }

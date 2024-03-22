@@ -923,7 +923,7 @@
             this.khaoKaiThodKrathiamCompleteButton.TabIndex = 91;
             this.khaoKaiThodKrathiamCompleteButton.Text = "ล้างข้อมูลออเดอร์";
             this.khaoKaiThodKrathiamCompleteButton.UseVisualStyleBackColor = true;
-            this.khaoKaiThodKrathiamCompleteButton.Click += new System.EventHandler(this.khaoKaiThodKrathiamCompleteButton_Click);
+            this.khaoKaiThodKrathiamCompleteButton.Click += new System.EventHandler(this.ClearOrder_Click);
             // 
             // label46
             // 
