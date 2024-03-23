@@ -170,20 +170,18 @@ namespace WindowsFormsApp1
         }
 
         //เพิ่มวัตถุดิบ
+        int pork;
+        int chicken;
+        int shrimp;
+        int squid;
+        int rice;
         private void increaseButton_Click(object sender, EventArgs e)
         {
-            int pork;
-            int chicken;
-            int shrimp;
-            int squid;
-            int rice;
+            
+            
             if (porkAddTextBox.Text == "")
             {
                 pork = 0;
-                chicken = 0;
-                shrimp = 0;
-                squid = 0;
-                rice = 0;
             }
             else
             {
@@ -227,15 +225,18 @@ namespace WindowsFormsApp1
                 rice = int.Parse(riceAddTextBox.Text);
             }
 
+            CSV csv = new CSV();
+            csv.SavetoFile(menu);
+            menu = csv.ReadFile();
             menu.AddMaterial(rice, pork, chicken, shrimp, squid);
             porkAddTextBox.Text = string.Empty;
             chickenAddTextBox.Text = string.Empty;
             shrimpAddTextBox.Text = string.Empty;
             squidAddTextBox.Text = string.Empty;
             riceAddTextBox.Text = string.Empty;
-            
 
             ShowMaterial();
+
         }
 
 
@@ -245,12 +246,8 @@ namespace WindowsFormsApp1
         private void importMaterial_Click(object sender, EventArgs e)
         {
             CSV csv = new CSV();
-            Menu1 import = csv.ReadFile();
-            porkTextBox.Text = import.Pork().ToString();
-            chickenTextBox.Text = import.Chicken().ToString();
-            shrimpTextBox.Text = import.Shrimp().ToString();
-            squidTextBox.Text = import.Squid().ToString();
-            riceTextBox.Text = import.Rice().ToString();
+            menu = csv.ReadFile();
+            ShowMaterial();
         }
 
         //บันทึกข้อมูลเข้าไฟล์
