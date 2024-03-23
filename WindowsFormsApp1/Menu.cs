@@ -10,6 +10,7 @@ namespace WindowsFormsApp1
     {
        
         //ตรวจสอบจำนวนวัตถุดิบเทียบกับจำนวนที่แต่ละเมนูต้องการ
+        //
         public bool khaoMuYang() 
         {
             if (pork >= 120 && rice >= 150)
@@ -43,7 +44,7 @@ namespace WindowsFormsApp1
         {
             if (shrimp >= 70 && squid >= 90 && rice >= 150)
             {
-                shrimp = shrimp - 5;
+                shrimp = shrimp - 70;
                 squid = squid - 90;
                 rice = rice - 150;
                 return true;
@@ -58,7 +59,7 @@ namespace WindowsFormsApp1
         {
             if (shrimp >= 70 && squid >= 90 && rice >= 150)
             {
-                shrimp = shrimp - 5;
+                shrimp = shrimp - 70;
                 squid = squid - 90;
                 rice = rice - 150;
                 return true;

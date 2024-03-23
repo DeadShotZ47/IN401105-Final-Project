@@ -161,6 +161,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("วัตถุดิบไม่เพียงพอ");
             }
         }
+        
+        //ปุ่ม"ล้างข้อมูลวัตถุดิบ"
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             menu.ClearMaterial();
@@ -258,6 +260,7 @@ namespace WindowsFormsApp1
             csv.SavetoFile(menu);
         }
 
+        //ปุ่ม"ล้างข้อมูลออเดอร์"
         private void ClearOrder_Click(object sender, EventArgs e)
         {
             ClearAllCurrent();
