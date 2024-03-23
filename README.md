@@ -8,7 +8,7 @@
 classDiagram
     Control <|-- Menu1
     Form1 <-- Control
-    Form1 <-- Menu1
+    Form1 --> Menu1
     class Form1{
         -int currentCount1
         -int currentCount2
